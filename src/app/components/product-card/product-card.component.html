@@ -1,0 +1,17 @@
+<mat-card class="shadow">
+    <img mat-card-image 
+    style="height:180px;width:50%;" src={{product.image}} alt="Photo of Cloth">
+    <div class="p-4">
+        <h1>{{product.title}}</h1>
+        <h2>Brand Name : Avian</h2>
+        <div class="flex gap-2">
+            <span>Rs. {{product.price}}</span>
+            <span><s>Rs. 2000</s></span>
+            <span>({{product.discount}}%) OFF</span>           
+        </div>
+        <br>
+        <div class="flex justify:center">
+            <button mat-raised-button color="primary" (click)="View()">View</button>
+        </div>
+    </div>
+</mat-card>

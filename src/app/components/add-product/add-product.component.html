@@ -1,0 +1,43 @@
+<!-- Template Drive Form Using ngModel -->
+
+<div class="p-8 mt-8 flex justify-center">
+    <form class="shadow border w-6/12 p-4" (ngSubmit)="AddProducts();">
+        <div class="flex flex-col">
+
+            <mat-form-field class="w-full">
+                <mat-label>Product Title</mat-label>
+                <input matInput name="title" [(ngModel)]="product.title" placeholder="Enter Product Title">
+            </mat-form-field>
+
+            <mat-form-field class="w-full">
+                <mat-label>Product Image Link</mat-label>
+                <input matInput name="image" [(ngModel)]="product.image" placeholder="Enter Product Image">
+            </mat-form-field>
+
+            <mat-form-field class="w-full">
+                <mat-label>Description</mat-label>
+                <input matInput name="description" [(ngModel)]="product.description"
+                    placeholder="Enter Product Description">
+            </mat-form-field>
+
+            <mat-form-field class="w-full">
+                <mat-label>Price</mat-label>
+                <input matInput name="price" [(ngModel)]="product.price" placeholder="Enter Product Price">
+            </mat-form-field>
+
+            <mat-form-field class="w-full">
+                <mat-label>Discount Price</mat-label>
+                <input matInput name="discount" [(ngModel)]="product.discount" placeholder="Enter Product Discount">
+            </mat-form-field>
+
+            <mat-form-field class="w-full">
+                <mat-label>Product Rating</mat-label>
+                <input matInput name="rating" [(ngModel)]="product.rating" placeholder="Enter Product Rating">
+            </mat-form-field>
+        </div>
+        <br>
+        <div class="flex">
+            <button type="submit" mat-raised-button color="primary">Save Product</button>
+        </div>
+    </form>
+</div>

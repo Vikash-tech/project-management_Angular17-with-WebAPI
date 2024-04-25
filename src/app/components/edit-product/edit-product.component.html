@@ -1,0 +1,46 @@
+<p>edit-product works!</p>
+<!-- Reactive Form Drive Form Wihtout Using ngModel -->
+
+<div class="p-8 mt-8 flex justify-center">
+    <form [formGroup]="productform" class="shadow border w-6/12 p-4" (ngSubmit)="EditProducts();">
+        <div class="flex flex-col">
+
+            <mat-form-field class="w-full">
+                <mat-label>Product Title</mat-label>
+                <input matInput name="title" formControlName="title" placeholder="Enter Product Title">
+            </mat-form-field>
+
+            <mat-form-field class="w-full">
+                <mat-label>Product Image Link</mat-label>
+                <input matInput name="image" formControlName="image" placeholder="Enter Product Image">
+            </mat-form-field>
+
+            <mat-form-field class="w-full">
+                <mat-label>Description</mat-label>
+                <input matInput name="description" 
+                    placeholder="Enter Product Description" formControlName="description">
+            </mat-form-field>
+
+            <mat-form-field class="w-full">
+                <mat-label>Price</mat-label>
+                <input matInput name="price" placeholder="Enter Product Price" formControlName="price">
+            </mat-form-field>
+
+            <mat-form-field class="w-full">
+                <mat-label>Discount Price</mat-label>
+                <input matInput name="discount"  placeholder="Enter Product Discount" formControlName="discount">
+            </mat-form-field>
+
+            <mat-form-field class="w-full">
+                <mat-label>Product Rating</mat-label>
+                <input matInput name="rating" placeholder="Enter Product Rating" formControlName="rating">
+            </mat-form-field>
+        </div>
+        <br>
+        <div class="flex">
+            <button type="submit" mat-raised-button color="primary">Update Product</button>
+            <button type="button" mat-raised-button color="primary" (click)="delete(this.productform)">Delete</button>
+        </div>
+
+    </form>
+</div>

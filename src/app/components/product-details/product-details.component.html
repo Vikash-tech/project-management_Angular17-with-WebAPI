@@ -1,0 +1,25 @@
+<h1>Product Details View Page : </h1>
+
+<!-- <div>
+    <button mat-fab extended>
+        <mat-icon>back</mat-icon>
+      </button>
+</div> -->
+<div class="flex justify-center">
+<mat-card class="shadow w-6/12">
+    <img mat-card-image 
+    style="height:250px;width:40%;" src={{product.image}} alt="Photo of Cloth">
+    <div class="p-4">
+        <h1>{{product.title}}</h1>
+        <h2>Brand Name : Avian</h2>
+        <h4>Description : {{product.description}} A product description provides consumers with practical information about a product’s benefits, measurements and specifications, composition, use cases and more. Detailed product descriptions are a critical part of selling online.</h4>
+        <div class="flex gap-2">
+            <span>Rs. {{product.price}}</span>
+            <span><s>Rs. 2000</s></span>
+            <span>({{product.discount}}%) OFF</span>           
+        </div>
+        <br>
+        <button mat-raised-button color="accent" [routerLink]="'/edit-product/' + product.id">Edit</button>
+    </div>
+</mat-card>
+</div>

@@ -1,0 +1,10 @@
+<div class="w-full flex items-center gap-4" style="width:1200px;">
+<mat-form-field subscriptSizing="dynamic" appearance="outline" class="!w-8/12"> 
+    <input matInput placeholder="Search Product .." (keypress)="onTyping($event)" [(ngModel)]="text" name="SearchProduct">
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="OnSearch();">Search</button>
+  <button mat-raised-button color="accent" routerLink="/AddProduct">Add Product</button>
+</div>
+<!-- (keypress)="onTyping($event)"
+(change)="InputSearchChange($event)" -->
